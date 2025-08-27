@@ -162,6 +162,106 @@ var i = 0 → 반복 시작할 때 i를 0으로 만든다. (딱 1번만 실행)
 
 i < 3 → i가 3보다 작은지 검사한다. (true면 반복, false면 종료)
 
-i++ → 반복이 한 번 끝날 때마다 i를 1 올린다. <++i 는 "먼저 1 증가시키고, 그 다음 값 사용"> / / <--i 는 "먼저 1 줄이고, 그 다음 값 사용">
+i++ → 반복이 한 번 끝날 때마다 i를 1 올린다. 
+///<++i 는 "먼저 1 증가시키고, 그 다음 값 사용"> ////
+/// <--i 는 "먼저 1 줄이고, 그 다음 값 사용">//// 이건 증감 연산자라고 부름
+
 그래서 i = 0, 1, 2일 때만 반복이 실행된다.
 /////////////////////////////////////////
+
+querySelector란?
+1.HTML에서 원하는 요소를 찾는 함수
+2.CSS 선택자 문법을 그대로 사용해서 요소를 고를 수 있음
+3.첫 번째로 매칭된 요소 하나만 가져옴
+
+4. document.querySelector("CSS선택자") 으로 사용
+
+예제 id로 찾기
+<html>
+<div id="box">Hello</div>
+
+<js>
+const el = document.querySelector("#box");
+console.log(el.textContent); // "Hello"
+
+
+함수란?
+코드를 한 덩어리로 묶어놓고, 필요할 때 이름 불러서 실행하는 것"
+
+왜?
+같은 코드를 여러 번 쓰지 않고, 재사용하기 위해
+코드가 길어져도 정리해서 보기 좋게 하기 위해
+어떤 입력을 받아서 계산하고, 그 결과(출력)를 내기 위해
+
+기본 형태
+function 함수이름(매개변수) {
+  // 실행할 코드
+  return 결과값;}
+
+1. function sayHello() {
+  console.log("안녕하세요!");
+}
+
+결과값
+sayHello(); // 실행하면 "안녕하세요!" 출력
+sayHello(); // 또 실행하면 또 "안녕하세요!"
+
+2. function greet(name) {
+  console.log("안녕, " + name + "!");
+}
+
+결과값
+greet("철수"); // "안녕, 철수!"
+greet("영희"); // "안녕, 영희!"
+
+
+return이란 무엇인가??
+
+“함수에서 계산한 결과를 밖으로 돌려주는 역할”
+함수 안에서 뭔가 계산을 하고, 그 값을 함수 밖으로 전달하고 싶을 때 사용
+return이 없으면 함수는 결과를 돌려주지 않고 undefined를 반환
+
+기본구조
+
+function 함수이름(매개변수1, 매개변수2, ...) {
+    // 코드 작성 (계산, 처리 등)
+    return 결과값; // 함수 밖으로 돌려주는 값
+}
+
+설명
+function → 함수를 정의
+매개변수(parameter) → 함수가 입력받는 값
+return → 함수가 계산한 결과를 밖으로 돌려줌
+결과값 → 숫자, 문자열, 객체 등 무엇이든 가능
+
+예제
+function add(a, b) {
+    return a + b; // a + b 계산 결과를 함수 밖으로 돌려줌
+}
+let result = add(2, 3);
+console.log(result); // 5
+
+
+Object란?
+단순한 값 하나(1, "문자")와 달리,
+여러 값들을 {} 안에 속성(property) 형태로 저장 가능
+속성은 이름: 값 쌍으로 정의
+
+예시
+const person = {
+  name: "철수",
+  age: 20,
+  job: "학생"
+};
+
+console.log(person.name); // "철수"
+console.log(person["age"]); // 20
+점(.) 표기법: person.name
+
+대괄호([]) 표기법: person["age"]
+
+person.gender = "남자";  // 속성 추가
+person.age = 21;         // 기존 속성 수정
+console.log(person);
+{ name: "철수", age: 21, job: "학생", gender: "남자" }
+
