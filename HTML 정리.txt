@@ -43,10 +43,10 @@ List:  <li> </li> 리스트 태그
 
 CSS
 
-class를 표현할때 
+class를 표현할때 .을 사용하고
 id를 표현 할땐 #을 사용함
 
-class>태그>id 으로 우선순위를 가지며 적용됨 (id가 최우선)
+class>태그> id 으로 우선순위를 가지며 적용됨 (id가 최우선)
 - id 값은 단 한번만 쓸수 있음.
 - class 값은 중복될 수 있음.
 
@@ -70,12 +70,13 @@ JavaScript 정리
 2. onchange 등등
 
 data type
--boolean : ture / False 값을 나타나게 함.
--Number
--Null
--Undefinded
--String
+-boolean : ture / false 값을 나타나게 함.
+-number
+-null
+-undefinded
+-string
 -symbol
+>> String과 string은 많이 다른거고, string이라고 쓰세요.
 
 -이항 연산자 + * / -
 -대입 연산자 =
@@ -86,7 +87,7 @@ data type
     document.querySelector('body').style.color = 'white';
     ">
 
-input으로 버튼형, 이름은 night, 클릭시 백그라운드 컬러는 블랙, 글씨는 흰색으로 반응.
+input으로 버튼형, 값은 night, 클릭시 백그라운드 컬러는 블랙, 글씨는 흰색으로 반응.
 
 document.querySeletor('body') 바디라는 태그에 요청한다. 
 -> css라는 언어에서 태그를 선택할 때 사용하는 문법을 querySelector('')가 사용함.
@@ -115,10 +116,6 @@ document.querySeletor('body') 바디라는 태그에 요청한다.
       document.write("4<br>");
 
 
-
-*리팩토링* 못하면 벌레인거임
-
-
 배열 Array
 
 get
@@ -128,7 +125,8 @@ length 등등등
 
 
 반복문
-while() > 괄호 안엔 ture, false 둘중에 하나만 들어감
+while() > 소괄호에는 조건식 또는 값이 들어가고, 이는 true 혹은 false이다
+
 /////////////////////////////////////////
 var i = 0;
 
@@ -163,7 +161,7 @@ var i = 0 → 반복 시작할 때 i를 0으로 만든다. (딱 1번만 실행)
 i < 3 → i가 3보다 작은지 검사한다. (true면 반복, false면 종료)
 
 i++ → 반복이 한 번 끝날 때마다 i를 1 올린다. 
-///<++i 는 "먼저 1 증가시키고, 그 다음 값 사용"> ////
+/// <++i 는 "먼저 1 증가시키고, 그 다음 값 사용"> ////
 /// <--i 는 "먼저 1 줄이고, 그 다음 값 사용">//// 이건 증감 연산자라고 부름
 
 그래서 i = 0, 1, 2일 때만 반복이 실행된다.
@@ -173,7 +171,6 @@ querySelector란?
 1.HTML에서 원하는 요소를 찾는 함수
 2.CSS 선택자 문법을 그대로 사용해서 요소를 고를 수 있음
 3.첫 번째로 매칭된 요소 하나만 가져옴
-
 4. document.querySelector("CSS선택자") 으로 사용
 
 예제 id로 찾기
@@ -196,7 +193,8 @@ console.log(el.textContent); // "Hello"
 기본 형태
 function 함수이름(매개변수) {
   // 실행할 코드
-  return 결과값;}
+  return 결과값;
+}
 
 1. function sayHello() {
   console.log("안녕하세요!");
@@ -264,4 +262,3 @@ person.gender = "남자";  // 속성 추가
 person.age = 21;         // 기존 속성 수정
 console.log(person);
 { name: "철수", age: 21, job: "학생", gender: "남자" }
-
