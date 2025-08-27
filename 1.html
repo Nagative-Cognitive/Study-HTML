@@ -4,10 +4,40 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>WEB1 - HTML</title>
-    <link rel="Stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <h1><a href="index.html">WEB</a></h1>
+
+    <!-- Night/Day 토글 버튼 -->
+    <input
+      type="button"
+      id="toggleTheme"
+      value="night"
+      onclick="
+      const bodyStyle = document.body.style;
+      const h1LinkStyle = document.querySelector('h1 a').style;
+      const articleElems = document.querySelectorAll('#ARTICLE, #ARTICLE *');
+      const menuLinks = document.querySelectorAll('#grid ol a');
+
+      if(this.value === 'night'){
+        bodyStyle.backgroundColor = 'black';
+        bodyStyle.color = 'white';
+        h1LinkStyle.color = 'white';
+        articleElems.forEach(el => el.style.color = 'white');
+        menuLinks.forEach(el => el.style.color = 'white');
+        this.value = 'day';
+      } else {
+        bodyStyle.backgroundColor = 'white';
+        bodyStyle.color = 'black';
+        h1LinkStyle.color = 'black';
+        articleElems.forEach(el => el.style.color = 'black');
+        menuLinks.forEach(el => el.style.color = 'black');
+        this.value = 'night';
+      }
+    "
+    />
+
     <div id="grid">
       <ol>
         <li><a href="1.html">HTML</a></li>
@@ -17,17 +47,18 @@
       <div id="ARTICLE">
         <h2>HTML</h2>
         <p>
-          <strong
-            ><a
+          <strong>
+            <a
               href="https://developer.mozilla.org/ko/docs/Web/HTML"
               target="_blank"
               title="HTML5"
-              >HTML(HyperText Markup Language)</a
-            ></strong
+            >
+              HTML(HyperText Markup Language)
+            </a> </strong
           >은 웹을 이루는 가장 기초적인 구성 요소로,
           <u>웹 콘텐츠의 의미와 구조를 정의</u>할 때 사용합니다. HTML 이외의
-          다른 기술은 일반적으로 <strong>웹 페이지의 모양/표현 (CSS)</strong>,
-          또는 <strong>기능/동작 (JavaScript)</strong>을 설명하는 데 사용됩니다.
+          다른 기술은 일반적으로 <b>웹 페이지의 모양/표현 (CSS)</b>, 또는
+          <b>기능/동작 (JavaScript)</b>을 설명하는 데 사용됩니다.
         </p>
         <p>
           HTML 요소는 "태그"를 사용해서 문서의 다른 텍스트와 구분합니다. 태그는

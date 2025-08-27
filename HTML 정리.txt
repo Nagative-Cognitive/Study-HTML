@@ -1,0 +1,119 @@
+태그
+<u> </u> 밑줄 긋기
+<strong> </strong> // <b>굵게 강조
+<h1> </h1> 제목을 나타내는 태그 , <h6>까지만 있음
+<br> 새로운 줄을 표현
+<p> </p>단락을 표현
+<a href="링크 url"> </a>링크를 표현
+
+
+<img> 이미지 태그
+<src=""> 주소를 적어주면 사용할수있음
+ex) <img src=" 이미지 이름" >
+
+-  예시 <img src="coding.jpg" width="100%" />
+HTML 속성(Attribute) : src="coding.jpg" ,"width="100%"  
+
+<title> </title> 본문의 제목을 표현
+
+
+부모태그 와 자식태그
+
+un Orderd List : <ul> </ul> 리스트 태그의 부모태그
+Ordered List : <ol> </ol> 리스트 태그의 부모태그( 순서대로 번호를 넣어줌)
+List:  <li> </li> 리스트 태그
+
+
+표 태그
+
+<table>
+
+<thead>
+<tr>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td> </td>
+</tr>
+</tbody>
+</table>
+
+
+CSS
+
+class를 표현할때 
+id를 표현 할땐 #을 사용함
+
+class>태그>id 으로 우선순위를 가지며 적용됨 (id가 최우선)
+- id 값은 단 한번만 쓸수 있음.
+- class 값은 중복될 수 있음.
+
+태그별로 사용되는 크기가 다름
+block level element 
+inline element 
+
+section header footer ==> 시멘틱태그
+
+///////////////////////
+25.08.27
+
+JavaScript 정리
+
+- 사용자와 상호작용하는 언어
+- HTML 위에서 시작하는 언어
+<scrpit> 태그 안쪽으로 사용
+
+- event(사건)
+1. click
+2. onchange 등등
+
+data type
+-boolean : ture / False 값을 나타나게 함.
+-Number
+-Null
+-Undefinded
+-String
+-symbol
+
+-이항 연산자 + * / -
+-대입 연산자 =
+-비교 연산자 : boolean , ===
+
+<input type="button" value="night" onclick="
+    document.querySelector('body').style.backgroundColor = 'black';
+    document.querySelector('body').style.color = 'white';
+    ">
+
+input으로 버튼형, 이름은 night, 클릭시 백그라운드 컬러는 블랙, 글씨는 흰색으로 반응.
+
+document.querySeletor('body') 바디라는 태그에 요청한다. 
+-> css라는 언어에서 태그를 선택할 때 사용하는 문법을 querySelector('')가 사용함.
+
+.style.backgroundColor = 'black';
+
+조건문
+<h2>IF-ture</h2>
+    <script>
+      document.write("1<br>");
+      if (true) {
+        document.write("2<br>");
+      } else {
+        document.write("3<br>");
+      }
+      document.write("4<br>");
+    </script>
+    <h2>IF-false</h2>
+    <script>
+      document.write("1<br>");
+      if (false) {
+        document.write("2<br>");
+      } else {
+        document.write("3<br>");
+      }
+      document.write("4<br>");
+
+
+
+*리팩토링*
