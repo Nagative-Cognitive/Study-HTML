@@ -5,39 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>WEB1 - HTML</title>
     <link rel="stylesheet" href="style.css" />
+    <script src="colors.js"></script>
   </head>
   <body>
     <h1><a href="index.html">WEB</a></h1>
-
-    <!-- Night/Day 토글 버튼 -->
-    <input
-      type="button"
-      id="toggleTheme"
-      value="night"
-      onclick="
-      const bodyStyle = document.body.style;
-      const h1LinkStyle = document.querySelector('h1 a').style;
-      const articleElems = document.querySelectorAll('#ARTICLE, #ARTICLE *');
-      const menuLinks = document.querySelectorAll('#grid ol a');
-
-      
-      if(this.value === 'night'){
-        bodyStyle.backgroundColor = 'black';
-        bodyStyle.color = 'white';
-        h1LinkStyle.color = 'white';
-        articleElems.forEach(el => el.style.color = 'white');
-        menuLinks.forEach(el => el.style.color = 'white');
-        this.value = 'day';
-      } else {
-        bodyStyle.backgroundColor = 'white';
-        bodyStyle.color = 'black';
-        h1LinkStyle.color = 'black';
-        articleElems.forEach(el => el.style.color = 'black');
-        menuLinks.forEach(el => el.style.color = 'black');
-        this.value = 'night';
-      }
-    "
-    />
+    <!-- 야간 모드 토글 버튼 -->
+    <input type="button" value="night" onclick="NightDayHandler(this);" />
 
     <div id="grid">
       <ol>

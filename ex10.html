@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Object</h1>
+    <h2>create</h2>
+    <script>
+      var coworkers = {
+        programmer: "이범보",
+        desinger: "갓도기",
+      };
+      document.write("programmer:" + coworkers.programmer + "<br>");
+      document.write("desinger:" + coworkers.desinger + "<br>");
+      coworkers.bookeeper = "응애";
+      document.write("bookeeper:" + coworkers.bookeeper + "<br>");
+      coworkers["data scientist"] = "기린";
+      document.write("data scientis: " + coworkers["data scientist"] + "<br>");
+    </script>
+    <h2>Iterate</h2>
+    <script>
+      for (var key in coworkers) {
+        document.write(key + "<br>");
+      }
+    </script>
+
+    <h2>Property & Method</h2>
+    <script>
+      coworkers.showAll = function () {
+        for (var key in coworkers) {
+          document.write(key + "<br>");
+        }
+      };
+      coworkers.showAll();
+    </script>
+  </body>
+</html>
