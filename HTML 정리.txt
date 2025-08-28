@@ -263,4 +263,5 @@ person.age = 21;         // 기존 속성 수정
 console.log(person);
 { name: "철수", age: 21, job: "학생", gender: "남자" }
 
+UI 와 API
 
